@@ -1,0 +1,161 @@
+/*Selector Universal*/
+*{
+margin: 0;
+padding: 0;
+background-color: rgb(5, 90, 139);
+}
+
+/*Selector de Etiqueta*/
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+a:hover{
+    border-radius: 5px;
+    background-color: rgb(55, 149, 189);
+    color: rgb(0, 109, 94);
+}
+
+
+header img{margin-left: 90px;
+margin-top: 1px;}
+h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+color: rgb(0, 9, 128);
+}
+h3{text-align: center;
+    color:rgb(0, 25, 107);
+font-size: 21px;}
+.imagenindex{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+h4{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-decoration: underline blue 2px;
+}
+section h2{
+    color: aqua;
+}
+.Rutinas-margen{margin-left: 1px;}
+
+/*index*/
+#grilla-index{
+    display: grid;
+    grid-template-areas: 
+    "image    header"
+    "image    lorem";
+    grid-template-columns: 400px 1700px ;
+    grid-template-rows: 50px 300px;
+}
+.suplementoslorem{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    grid-area: header;
+    background-color: rgb(74, 14, 240);
+}
+.lorem1{
+    grid-area: lorem;
+    background-color: blue;
+}
+
+
+
+#inicio-style{
+    width: 1fr;
+    color: rgb(0, 109, 94);
+    text-decoration: none;
+    background-color: rgb(55, 149, 189);
+    margin-left: 190px;
+    border: solid rgb(55, 149, 189);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.links-styles {
+    text-decoration: none;
+    color: rgb(55, 149, 189);
+    margin-left: 170px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.background-image-rutina{
+    height: 1200px;
+    width: 100%;
+    background-image: url("../recursos.html/Imagenes/Rutinas.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.flexbox-conteiner{
+    max-width: 100%;
+    border: 1px solid black;
+    background-color: bisque;
+    padding: 10px;
+    margin: 10px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: space-around;
+}
+.caja{
+    background-color: rgb(214, 122, 10);
+    width: 300px;
+    height: 300px;
+    border: solid;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.c1{background-color: darkblue; 
+order: 1;}
+.c2{background-color: rgb(185, 16, 16);
+order: 2;}
+.c3{background-color: aqua;
+order: 3;}
+/*grid css practica*/
+.grid-conteiner{
+    /*box modeling*/
+    width: 90%;
+    max-width: 1000px; /*se rellena con la cantidad de px que pongamos en el grid-templete*/
+    border: 10px solid black;
+    margin: auto;
+    /*tipografia*/
+    font-size: 50px;
+    text-align:center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 400px 400px 400px;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+/*activar grid*/
+/*divs que estan directamente adentro del grid container*/
+
+.grid-conteiner > div{
+display: flex;
+flex-wrap: wrap;
+padding: 20px;
+color: rgb(12, 56, 95) ;
+background-color: rgb(1, 163, 192);
+}
+.botones{
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.conteiner1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
