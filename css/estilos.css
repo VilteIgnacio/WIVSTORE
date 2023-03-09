@@ -47,24 +47,42 @@ section h2{
 
 /*index*/
 #grilla-index{
+    margin-top: 50px;
     display: grid;
     grid-template-areas: 
     "image    header"
     "image    lorem";
-    grid-template-columns: 400px 1700px ;
+    grid-template-columns: 1fr 5fr ;
     grid-template-rows: 50px 300px;
 }
+#imagecreatina{
+    display: image;
+    margin-top: 50px;
+}
+.title{
+    width: 100%;
+    overflow: hidden;
+    font-size: 1.28em;
+    letter-spacing: 2px;
+    line-height: initial;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .suplementoslorem{
-    display: flex;
+    
     flex-direction: row;
-    justify-content: start;
+    text-align: center;
     align-items: start;
     grid-area: header;
-    background-color: rgb(74, 14, 240);
+    background-color: rgba(8, 231, 82, 0.219);
+    font-weight: 600;
+    
 }
 .lorem1{
     grid-area: lorem;
-    background-color: blue;
+    background-color: rgba(28, 124, 36, 0.801);
 }
 
 
