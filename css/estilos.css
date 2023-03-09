@@ -59,6 +59,12 @@ section h2{
     display: image;
     margin-top: 50px;
 }
+.titulos{
+    max-width: 100%;
+text-align: center;
+    background-color: rgb(55, 149, 189);
+    color: rgb(0, 109, 94);
+}
 .title{
     width: 100%;
     overflow: hidden;
@@ -167,8 +173,13 @@ color: rgb(12, 56, 95) ;
 background-color: rgb(1, 163, 192);
 }
 .botones{
+    margin-left: 400px;
+    padding: 4px;
+    border: solid ;
+    font-size: 25px;
+    margin: 0px 30px;
     cursor: pointer;
-    background-color: blueviolet;
+    background-color: rgb(245, 6, 6);
 }
 
 .conteiner1{
