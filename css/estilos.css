@@ -1,26 +1,27 @@
 /*Selector Universal*/
 *{
-margin: 0;
+margin: 0px;
 padding: 0;
 background-color: rgb(5, 90, 139);
 }
+
 
 /*Selector de Etiqueta*/
 nav{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-around ;
     align-items: center;
+
 }
+
 a:hover{
     border-radius: 5px;
-    background-color: rgb(55, 149, 189);
+    background-color: rgb(5, 90, 139);
     color: rgb(0, 109, 94);
 }
 
 
-header img{margin-left: 90px;
-margin-top: 1px;}
 h1 {
     font-size: 50px;
     display: flex;
@@ -28,13 +29,18 @@ h1 {
 color: rgb(0, 9, 128);
 }
 h3{text-align: center;
+    max-width: 100%;
     color:rgb(0, 25, 107);
-font-size: 21px;}
-.imagenindex{
-    display: flex;
-    justify-content: space-around;
+font-size: 30px;
+font-weight: 500;
+letter-spacing: 2px;
 }
 
+.imagenindex{
+    margin-left: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 h4{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -46,20 +52,12 @@ section h2{
 .Rutinas-margen{margin-left: 1px;}
 
 /*index*/
-#grilla-index{
-    margin-top: 50px;
-    display: grid;
-    grid-template-areas: 
-    "image    header"
-    "image    lorem";
-    grid-template-columns: 1fr 5fr ;
-    grid-template-rows: 50px 300px;
-}
-#imagecreatina{
-    display: image;
-    margin-top: 50px;
-}
+
+
 .titulos{
+    display: flex;
+    justify-content: center;
+    align-items: end;
     max-width: 100%;
 text-align: center;
     background-color: rgb(55, 149, 189);
@@ -95,6 +93,7 @@ text-align: center;
 
 #inicio-style{
     width: 1fr;
+    height: 30px;
     color: rgb(0, 109, 94);
     text-decoration: none;
     background-color: rgb(55, 149, 189);
@@ -108,13 +107,8 @@ text-align: center;
     margin-left: 170px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.background-image-rutina{
-    height: 1200px;
-    width: 100%;
-    background-image: url("../recursos.html/Imagenes/Rutinas.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-}
+
+
 .flexbox-conteiner{
     max-width: 100%;
     border: 1px solid black;
@@ -172,14 +166,9 @@ padding: 20px;
 color: rgb(12, 56, 95) ;
 background-color: rgb(1, 163, 192);
 }
-.botones{
-    margin-left: 400px;
-    padding: 4px;
-    border: solid ;
-    font-size: 25px;
-    margin: 0px 30px;
-    cursor: pointer;
-    background-color: rgb(245, 6, 6);
+#botones{
+    margin-left: 160px;
+    
 }
 
 .conteiner1{
@@ -188,3 +177,21 @@ background-color: rgb(1, 163, 192);
     justify-content: center;
     align-items: start;
 }
+
+
+/*navbar responsive*/
+
+@media screen and (min-width: 500px) and (max-width: 1199px){
+
+    h3{background-color: rgb(10, 138, 224);
+    font-weight: bolder;
+    max-width: 100%;
+    font-size: 20px;
+    letter-spacing: 0;
+    }
+    main{
+        text-align: center;
+    }
+}
+
+
