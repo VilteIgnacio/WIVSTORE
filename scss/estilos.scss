@@ -2,30 +2,35 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(5, 90, 139);
-  }
-  
-  /*Selector de Etiqueta*/
-  nav {
+    background-color: rgb(69, 115, 201);
+}
+/*import*/
+@import "fondos";
+@import "navbar";
+/*creacion de variables*/
+$color: red;
+
+/*Selector de Etiqueta*/
+nav {
     font-size: 25px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-  }
-  
-  a:hover {
-    border-radius: 5px;
-    background-color: rgb(5, 90, 139);
-    color: rgb(0, 109, 94);
-  }
-  
-  header img {
+}
+
+a:hover {
+    
+color: rgb(0, 109, 94);
+}
+
+header img {
     margin-left: 90px;
-    margin-top: 1px;
-  }
-  
-  h1 {
+    background: none;
+    
+}
+
+h1 {
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -33,13 +38,13 @@
   }
   
   h2 {
-    color: rgb(244, 12, 252);
+    color: rgb(30, 82, 223);
 
   }
   
   h3 {
     text-align: center;
-    color: rgb(0, 25, 107);
+    color: rgb(0, 9, 128);
     font-size: 40px;
     letter-spacing: 3px;
   }
@@ -48,6 +53,9 @@
     display: flex;
     justify-content: space-around;
   }
+  .imgindex{
+  }
+  
   
   h4 {
     color: rgb(18, 18, 153);
@@ -62,27 +70,17 @@
   
   section h2 {
     color: aqua;
-  }
-  
-  .Rutinas-margen {
+}
+
+.Rutinas-margen {
     margin-left: 1px;
-  }
-  
-  /*index*/
-  #grilla-index {
-    margin-top: 50px;
-    display: grid;
-    grid-template-areas: "image    header" "image    lorem";
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 50px 300px;
-  }
-  
-  #imagecreatina {
+}
+#imagecreatina {
     display: image;
     margin-top: 50px;
-  }
-  
-  .titulos {
+}
+
+.titulos {
     max-width: 100%;
     text-align: center;
     background-color: rgb(55, 149, 189);
@@ -110,16 +108,16 @@
   }
 
   #inicio-style {
-    width: 1fr;
-    color: rgb(0, 109, 94);
+    
+    background: none;
     text-decoration: none;
-    background-color: rgb(55, 149, 189);
-    margin-left: 190px;
-    border: solid rgb(55, 149, 189);
+    
     font-family: Georgia, "Times New Roman", Times, serif;
   }
   
 .links-styles {
+    background: none;
+    
     text-decoration: none;
     color: rgb(55, 149, 189);
     margin-left: 170px;
@@ -194,10 +192,18 @@ position: relative;
   
   }
   
+  
+/*condicionales*/
   .flexbox-conteiner {
+    @if($color!=green){
+        background-color: green;
+    }
+@else if ($color==red){
+    background-color: red;
+}
+@else {background-color:black}
     max-width: 100%;
     border: 1px solid black;
-    background-color: bisque;
     padding: 10px;
     margin: 10px;
     height: 650px;
@@ -207,28 +213,65 @@ position: relative;
     justify-content: space-around;
     align-items: flex-end;
     align-content: space-around;
-  }
+}
 
-  /*grid css practica*/
-  .grid-conteiner {
-    /*box modeling*/
-    width: 90%;
-    max-width: 1000px; /*se rellena con la cantidad de px que pongamos en el grid-templete*/
-    border: 10px solid black;
-    margin: auto;
-    /*tipografia*/
-    font-size: 50px;
-    text-align: center;
+/*bucle EACH*/
+$lista1: violet ,yellow , darkgreen , green;
+@each $color in $lista1{
+    .#{$color}{
+        background-color: $color;
+    }
+}
+
+/*extend*/
+.card{background-color: white;
+border-radius: 4px;
+padding: 10px;
+
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    @extend .card;
+}
+
+
+/*Mixins*/
+@mixin crearborder($colorborde, $size, $shadow ){
+    border: $colorborde $size solid;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+/*ejemplo*/
+.img{
+    @include crearborder(red,10px,black);
+}
+.img-avatar{
+    @include crearborder(green,20px,red)
+}
+
+
+
+/*grid css practica*/
+.grid-conteiner {
+/*box modeling*/
+width: 90%;
+max-width: 1000px; /*se rellena con la cantidad de px que pongamos en el grid-templete*/
+border: 10px solid black;
+margin: auto;
+/*tipografia*/
+font-size: 50px;
+text-align: center;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 400px 400px 400px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-    row-gap: 15px;
-  }
-  
-  /*activar grid*/
-  /*divs que estan directamente adentro del grid container*/
+grid-template-rows: 400px 400px 400px;
+-moz-column-gap: 10px;
+column-gap: 10px;
+row-gap: 15px;
+}
+
+/*activar grid*/
+/*divs que estan directamente adentro del grid container*/
 
 
   

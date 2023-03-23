@@ -2,9 +2,24 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: rgb(5, 90, 139);
+  background-color: rgb(69, 115, 201);
 }
 
+/*import*/
+.logo-wiv {
+  width: 100px;
+  background: none;
+}
+
+.navegacion {
+  background-image: radial-gradient(circle, rgb(10, 10, 10), rgb(34, 19, 241));
+}
+
+.navegacion a {
+  background-color: none;
+}
+
+/*creacion de variables*/
 /*Selector de Etiqueta*/
 nav {
   font-size: 25px;
@@ -15,14 +30,12 @@ nav {
 }
 
 a:hover {
-  border-radius: 5px;
-  background-color: rgb(5, 90, 139);
   color: rgb(0, 109, 94);
 }
 
 header img {
   margin-left: 90px;
-  margin-top: 1px;
+  background: none;
 }
 
 h1 {
@@ -33,12 +46,12 @@ h1 {
 }
 
 h2 {
-  color: rgb(244, 12, 252);
+  color: rgb(30, 82, 223);
 }
 
 h3 {
   text-align: center;
-  color: rgb(0, 25, 107);
+  color: rgb(0, 9, 128);
   font-size: 40px;
   letter-spacing: 3px;
 }
@@ -65,15 +78,6 @@ section h2 {
 
 .Rutinas-margen {
   margin-left: 1px;
-}
-
-/*index*/
-#grilla-index {
-  margin-top: 50px;
-  display: grid;
-  grid-template-areas: "image    header" "image    lorem";
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 50px 300px;
 }
 
 #imagecreatina {
@@ -109,16 +113,13 @@ section h2 {
 }
 
 #inicio-style {
-  width: 1fr;
-  color: rgb(0, 109, 94);
+  background: none;
   text-decoration: none;
-  background-color: rgb(55, 149, 189);
-  margin-left: 190px;
-  border: solid rgb(55, 149, 189);
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .links-styles {
+  background: none;
   text-decoration: none;
   color: rgb(55, 149, 189);
   margin-left: 170px;
@@ -197,10 +198,11 @@ section h2 {
   font-size: 60px;
 }
 
+/*condicionales*/
 .flexbox-conteiner {
+  background-color: green;
   max-width: 100%;
   border: 1px solid black;
-  background-color: bisque;
   padding: 10px;
   margin: 10px;
   height: 650px;
@@ -210,6 +212,49 @@ section h2 {
   justify-content: space-around;
   align-items: flex-end;
   align-content: space-around;
+}
+
+/*bucle EACH*/
+.violet {
+  background-color: violet;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.darkgreen {
+  background-color: darkgreen;
+}
+
+.green {
+  background-color: green;
+}
+
+/*extend*/
+.card, .avatar {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+/*Mixins*/
+/*ejemplo*/
+.img {
+  border: red 10px solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.img-avatar {
+  border: green 20px solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px red;
 }
 
 /*grid css practica*/
