@@ -34,12 +34,12 @@ a:hover {
 }
 
 header img {
-  margin-left: 90px;
+  margin-left: 100px;
   background: none;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 100px;
   display: flex;
   justify-content: center;
   color: rgb(0, 9, 128);
@@ -78,6 +78,8 @@ section h2 {
 }
 
 .imgindex {
+  border: rgb(65, 10, 216) solid 5px;
+  border-radius: 3px;
   transition: all 3s;
 }
 
@@ -98,19 +100,8 @@ section h2 {
 .titulos {
   max-width: 100%;
   text-align: center;
-  background-color: rgb(55, 149, 189);
-  color: rgb(0, 109, 94);
-}
-
-.title {
-  width: 100%;
-  overflow: hidden;
-  font-size: 1.28em;
-  letter-spacing: 2px;
-  line-height: initial;
-  vertical-align: middle;
-  text-align: center;
-  text-transform: uppercase;
+  background-color: black;
+  color: rgb(184, 160, 177);
 }
 
 .suplementoslorem {
