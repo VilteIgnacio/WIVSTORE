@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     background-color: rgb(69, 115, 201);
+    box-sizing: border-box;
 }
 /*import*/
 @import "fondos";
@@ -12,19 +13,23 @@ $color: red;
 
 /*Selector de Etiqueta*/
 nav {
-    font-size: 25px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-a:hover {
-    
-color: rgb(0, 109, 94);
+.logo-wiv{
+  width: 110px;
+  background: none;
 }
+
+
+
 
 header img {
+  
     margin-left: 100px;
     background: none;
     
@@ -65,10 +70,22 @@ h1 {
   ol {
     font-size: 25px;
   }
-  
+  ul{
+
+  }
   section h2 {
     color: aqua;
 }
+footer{
+  margin-top:  0px;
+  color: #0b07fc;
+  border: solid black 1px;
+}
+.bc-footer{background-color: black;}
+
+
+
+
 .imgindex{
     border: rgb(65, 10, 216) solid 5px;
     border-radius: 3px;
@@ -95,20 +112,19 @@ h1 {
     background-color: black;
     color: rgb(184, 160, 177);
   }
-  .suplementoslorem {
-    flex-direction: row;
-    text-align: center;
-    align-items: start;
-    grid-area: header;
-    background-color: rgba(5, 236, 82, 0.219);
-    font-weight: 600;
+  .img-suplementos-index{
+    border: solid rgb(65, 10, 216) 5px;
+border-radius: 3px;
+
+  }
+  .lorem-suplementos{
+    font-weight: bold;
   }
 
   #inicio-style {
-    
+    color: blue;
     background: none;
     text-decoration: none;
-    
     font-family: Georgia, "Times New Roman", Times, serif;
   }
   
@@ -119,6 +135,11 @@ h1 {
     color: rgb(55, 149, 189);
     margin-left: 170px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.links-styles:hover{
+  background-color: #fff;
+  transition: 0.6s;
+  border-radius: 5px;
 }
 /*backgrounds-images*/
 .background-image-quienes-somos{
@@ -230,9 +251,13 @@ padding: 10px;
     @include crearborder(green,20px,red)
 }
 
-@media screen and (min-width: 500px) and (max-width: 1199px) {
+
+
+@media screen and (min-width:400px) and  (max-width: 1689px) {
+  h1{font-size: 25px;
+  font-weight: bold;}
     h3 {
-    background-color: rgb(5, 90, 139);
+    background-color: $back-g-color;
     font-weight: bolder;
     max-width: 100%;
     font-size: 25px;
@@ -241,13 +266,44 @@ padding: 10px;
     main {
     text-align: center;
     }
-    .background-image-quienes-somos h2{
-        left: 30%;
+    nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
     }
-    .background-image-quienes-somos p{
-    left: 40%;
-    top: 3%;
-    font-size: 20px;
+    nav a{
+      margin: 2% 0%;
+      color:rgb(55, 149, 189);
+    }
+    .links-styles{
+    margin: 2% 0%;
+    
+    }
+  nav img{
+    display: none;
     }
     
-}
+    .background-image-quienes-somos h2{
+      left: 20%;
+    }
+    .background-image-quienes-somos p{
+      display: none;
+    
+    }
+    
+  }
+    @media screen and (max-width: 1500px){
+      .background-image-indumentaria{height: 700px;
+      }
+      .background-image-indumentaria h2{
+        font-size: 20px;
+        border-radius: 10px;
+      }
+      .background-image-indumentaria-conjuntos{height: 700px;}
+  
+  .background-image-indumentaria-conjuntos h2{font-size: 20px;
+  border-radius: 10px;}
+    }
+
+
+
