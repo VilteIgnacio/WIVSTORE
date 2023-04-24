@@ -18,13 +18,15 @@ nav {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+background: none;
 }
+
+
 
 .logo-wiv{
   width: 110px;
   background: none;
 }
-
 
 
 
@@ -73,6 +75,7 @@ h1 {
   ul{
 
   }
+
   section h2 {
     color: aqua;
 }
@@ -105,7 +108,11 @@ footer{
     display: image;
     margin-top: 50px;
 }
-
+#botones{
+margin-top: 35px;
+color: #fff;
+font-size: 20px;
+}
 .titulos {
     max-width: 100%;
     text-align: center;
@@ -126,11 +133,17 @@ border-radius: 3px;
     background: none;
     text-decoration: none;
     font-family: Georgia, "Times New Roman", Times, serif;
+/*corte*/
+
+
   }
   
+  .imagenmaquinas{
+    text-align: center;
+
+  }
 .links-styles {
     background: none;
-    
     text-decoration: none;
     color: rgb(55, 149, 189);
     margin-left: 170px;
@@ -152,24 +165,31 @@ border-radius: 3px;
     opacity: 70%;
     cursor: pointer
 }
+.background-image-quienes-somos a{
+  text-decoration: none;
+}
 .background-image-quienes-somos h2{
+  
     letter-spacing: 5px;
     font-weight: bold;
-    color: black;
-    background-color: rgba(250, 247, 247, 0.938);
+    color: rgb(24, 0, 245);
+    background: none;
   font-size: 30px;
-position: relative;
+  
   top: 2%;
   left: 60%;
   transform: translate(-50% -50%);
   text-align: start;
 }
 .background-image-quienes-somos p{
-    background-color: rgba(250, 247, 247, 0.938);
-    position: relative;
-    left: 75%;
+  color: #ca1414;
+  
+margin-top: 50%;
+    background: none;
+    left: 50%;
     top: 20%;
-    font-size: 20px;
+    font-size: 23px;
+    text-align: center;
 }
 .background-image-indumentaria {
     background-image: url("../recursos.html/Imagenes/zapatillas 1 (10).jpg");
@@ -185,7 +205,7 @@ position: relative;
     letter-spacing: 5px;
     font-weight: bold;
     color: black;
-    background-color: rgb(218, 218, 218);
+    background: none;
   font-size: 40px;
   position: absolute;
   top: 2%;
@@ -250,10 +270,92 @@ padding: 10px;
 .img-avatar{
     @include crearborder(green,20px,red)
 }
+.stock-grid{
+margin: 10% 5%;
+padding: 5px;
+text-align: center;
+}
+
+.stock-grid img{
+margin: 0;
+border-radius: 10px;
+width: 100%;
+}
+.stock-grid img:hover{
+opacity: 70%;
+transition: 0.6s;
+cursor: pointer;
+width: 100%;
+box-shadow: 20px 20px 10px 10px rgb(42, 42, 187);
+}
+.stock-grid h4{
+letter-spacing: 3px;
+border-radius: 10px;
+background-color: rgb(18, 32, 231);
+color: black;
+font-size: 35px;
+padding: 30px;
+}
+
+.grid-container{
+display: grid;
+grid-template-columns:repeat(2,50%);
+grid-template-rows: repeat(2,40%);
+gap: 2rem;
+}
+.menuesc{
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  color: black;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.menuesc:hover{
+  background-color: #fff;
+  border-radius: 10px;
+}
+section p{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.5s;
+}
+#menu1:target p{
+  max-height: 500px;
+  background-color: rgb(13, 141, 214);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#menu2:target p{max-height: 500px;
+  background-color: rgb(13, 141, 214);
+  padding: 10px;
+  border-radius: 15px;
+}
+#menu3:target p{max-height: 500px;
+  background-color: rgb(13, 141, 214);
+  padding: 10px;
+  border-radius: 15px;}
+#menu4:target p{max-height: 500px;
+  background-color: rgb(13, 141, 214);
+  padding: 10px;
+  border-radius: 15px;}
+#menu5:target p{
+  max-height: 500px;
+  background-color: rgb(13, 141, 214);
+  padding: 10px;
+  border-radius: 15px;
+margin-bottom: 100px;
+}
+
+  
+
+@media screen and (min-width:200px) and  (max-width: 1689px) {
 
 
-
-@media screen and (min-width:400px) and  (max-width: 1689px) {
   h1{font-size: 25px;
   font-weight: bold;}
     h3 {
@@ -266,33 +368,51 @@ padding: 10px;
     main {
     text-align: center;
     }
-    nav{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    }
-    nav a{
+    
+      .links-styles{
       margin: 2% 0%;
-      color:rgb(55, 149, 189);
-    }
-    .links-styles{
-    margin: 2% 0%;
-    
-    }
-  nav img{
-    display: none;
-    }
-    
+      
+      }
+      nav{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        }
+        nav a{
+          margin: 2% 0%;
+          color:rgb(55, 149, 189);
+        }
+        .links-styles{
+        margin: 2% 0%;
+        
+        }
+      nav img{
+        display: none;
+        }
+        .background-image-quienes-somos{
+        height: 500px;
+        }
     .background-image-quienes-somos h2{
-      left: 20%;
+      left: 30%;
+      
     }
     .background-image-quienes-somos p{
-      display: none;
+background: none;
+
+
+color: black;
+font-weight: bolder;
     
     }
-    
+    #img-maquinas{
+      margin: 0;
+      width: 300px;
+      }
   }
+  
     @media screen and (max-width: 1500px){
+
+
       .background-image-indumentaria{height: 700px;
       }
       .background-image-indumentaria h2{
@@ -304,6 +424,18 @@ padding: 10px;
   .background-image-indumentaria-conjuntos h2{font-size: 20px;
   border-radius: 10px;}
     }
-
-
-
+    @media screen and (min-width: 200px)  and (max-width: 800px){
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(1,100%);
+      grid-template-rows: repeat(6,20%);
+    }
+    .stock-grid h4{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #botones{
+      font-size: 15px;
+    }
+    
+    }
